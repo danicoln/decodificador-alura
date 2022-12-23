@@ -103,12 +103,11 @@ label{
 	border: none;
 	display:block; 
 	width: 280px;
-	height: 300px;
+	height: 280px;
 	top: 168px;
 	left: 240px;
 	resize: none;
 	
-	width: 45%;
 
 	font-family: 'Inter', cursive;
 	font-style: normal;
@@ -134,7 +133,7 @@ label{
 position: absolute;
 margin: 20px;
 width: 336px;
-height: 751px;
+height: 651px;
 left: 940px;
 top: 72px;
 bottom: 130px;
@@ -191,7 +190,7 @@ background-size: 300px;
 
 .footer{
 	background: #F2F7FF;
-	margin: 25% 0 0 0;
+	margin: 10% 0 0 0;
 	display: flex;
 
 }
