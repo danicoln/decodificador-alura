@@ -102,7 +102,7 @@ label{
 	
 	border: none;
 	display:block; 
-	width: 280px;
+	width: 700px;
 	height: 280px;
 	top: 168px;
 	left: 240px;
@@ -117,7 +117,7 @@ label{
 	
 	padding: 10px 0px 1px 0px;
 	margin: 10px 1px 10px 10px;
-	background: #E5E5E5;
+	background: white /*#E5E5E5;*/
 }
 
 .msgCripto:focus {
