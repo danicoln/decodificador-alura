@@ -1,0 +1,309 @@
+
+body{
+	font-family: 'Mukta', sans-serif;
+	background: #E5E5E5;
+	padding: 10px 10px;
+	margin: 10px 10px;
+}
+
+.cabecalho-logo{
+	margin: 10px 50px 10px 10px;
+	padding: 10px 100px 60px 0;
+}
+
+.main{
+	padding: 10px 10px;
+	margin: 10px 10px;
+}
+
+header img{
+	width: 31.09px;
+	height: 48px;
+	right: 95%;
+	position: absolute;
+}
+
+p strong{
+	text-align: left;
+	display: inline;
+	padding: 30px 21px 30px 20px;
+
+}
+
+div p{
+	margin: 10px 10px;
+	padding: 10px 10px;
+}
+
+h2{
+	padding: 0px 0px 0px 100px;
+	margin: 0px 0px 0px 100px;
+}
+
+
+div h1{
+	/* font-family: 'Rubik Vinyl', cursive; */
+	text-align: center;
+	height: 46px;
+	top: 24px;
+	left: 8px;
+	display: inherit;
+}
+div h2{
+	
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 150%;
+
+	color: #495057;
+	opacity: 0.8;
+
+}
+
+
+
+section h2{
+	text-align: left;
+	width: 15;
+	height: 23;
+	top: 12;
+	left: 16px;
+}
+
+
+main{
+	width: 100%;
+	margin: 0 auto;
+}
+
+form{
+	margin: 40px 0;
+}
+
+label{
+	margin: 20px 10px 10px 10px;
+	display: block;
+	font-size: 20px;
+	text-align: left;
+
+}
+
+
+.secaoTexto{
+	text-align: center;
+	display:block;
+	padding: 10px 10px;
+	margin: 15px 15px;
+	
+}
+
+
+.msgCripto{
+	
+	border: none;
+	display:block; 
+	width: 280px;
+	height: 300px;
+	top: 168px;
+	left: 240px;
+	resize: none;
+	
+	width: 45%;
+
+	font-family: 'Inter', cursive;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 32px;
+	line-height: 150%;
+	
+	padding: 10px 0px 1px 0px;
+	margin: 10px 1px 10px 10px;
+	background: #E5E5E5;
+}
+
+.msgCripto:focus {
+	outline: 0;
+}
+
+.msgCripto:placeholder {
+	color: #0A3871;
+}
+
+/*Rectangle1*/
+.msg {
+position: absolute;
+margin: 20px;
+width: 336px;
+height: 751px;
+left: 940px;
+top: 72px;
+bottom: 130px;
+border: none;
+resize: none;
+border-radius: 15px;
+bottom: 130px;
+padding: 30px;
+font-weight: bold;
+/* White */
+
+background-image: url("C:/Users/User/OneDrive/Área de Trabalho/Oracle One/Challenge - Decodificador de Texto/src/imagens/pessoa-com-lupa.png");
+background-repeat: no-repeat;
+background-position: center;
+background-size: 300px;
+
+/* shadow */
+
+
+}
+
+.msg:focus {
+	outline: 0;
+}
+
+.texto-saida {
+	position: absolute;
+	margin: 10px 10px 10px 70px;
+	padding: 10px 10px 10px 70px;
+	text-align: center;
+
+
+}
+
+.texto-saida h3{
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.texto-saida p{
+	margin-top: 15px;
+	margin-left: 5px;
+}
+
+
+.redes-sociais {
+	font-size: 20px;
+	margin-left: 20px;
+}
+
+.redes-sociais i{
+	margin-left: 70px;
+}
+
+.footer{
+	background: #F2F7FF;
+	margin: 25% 0 0 0;
+	display: flex;
+
+}
+
+.footer span{
+	display: inline-block;
+	font-size: 15px;
+	font-style: italic;
+	color: black;
+
+}
+
+.fa-linkedin{
+	padding: 10px 10px 10px 550px;
+	font-size: 30px;
+}
+
+.fa-github{
+	padding: 10px 10px 10px 10px;
+	font-size: 30px;
+}
+
+.fa-instagram{
+	padding: 10px 10px 10px 10px;
+	font-size: 30px;
+}
+
+.codificar {
+	text-align: center;
+	width: 343;
+	height: 624;
+	top: 152;
+	left: 16px;
+	font-size: 20px;
+	display: inline;
+
+	width: 175px;
+	padding: 10px 10px 10px 10px;
+	margin: 25px 10px 10px 30px;
+	background: #526BC3;
+	color: white;
+	font-weight: bolder;
+	font-size: 18px;
+	border: 1px solid #0A3871;
+	border-radius: 24px;
+	transition: 1s all;
+	cursor: pointer;
+}
+
+
+.decodificar{
+	text-align: center;
+	width: 343;
+	height: 624;
+	top: 152;
+	left: 16px;
+	font-size: 20px;
+	display: inline;
+	width: 175px;
+	 
+	padding: 10px 10px 10px 10px;
+	margin: 25px 10px 10px 30px;
+	color: #526BC3;
+	font-weight: bolder;
+	font-size: 18px;
+	border: 1px solid #0A3871;
+	border-radius: 24px;
+	transition: 1s all;
+	cursor: pointer;
+}
+
+
+
+div.buttons{
+	margin: 0 50% 0 0;
+}
+
+div button:hover{
+	background: #0C3FFF;
+	transform: scale(1.1);
+}
+
+
+#copiar{
+	/* Button */
+
+
+box-sizing: border-box;
+
+/* Auto layout */
+
+display: none;
+flex-direction: row;
+align-items: flex-start;
+padding: 24px;
+gap: 8px;
+margin: 25px 10px 10px 50px;
+
+position: absolute;
+width: 336px;
+height: 67px;
+left: 942px;
+top: 790px;
+
+text-align: center;
+font-weight: bolder;
+font-size: 18px;
+
+/* Dark blue/dark-blue-300 */
+
+transition: 1s all;
+cursor: pointer;
+border: 1px solid #0A3871;
+border-radius: 24px;
+}
