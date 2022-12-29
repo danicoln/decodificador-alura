@@ -14,7 +14,7 @@ function buttonCodificar(){
 	}
 
 	msg.value = textoCodificado;
-	msg.style.background="#FFFFFF";
+	msg.style.background="none";
 	msg.style.color="orange";
 	saidaTexto.style.display="none";
 	botaoCopiar.style.display='block';
