@@ -5,93 +5,84 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<!-- <link rel="stylesheet" href="src/css/reset.css"> -->
+		<link rel="stylesheet" href="src/css/reset.css">
 		<link rel="stylesheet" href="src/css/style.css">
 
 		<link href="https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 		<title>4º Challenge ONE</title> 
 
 		
 	</head>
 
 	<body>
+		
+		<section class="cabecalho">
+			<header>
+					
+				<img src="src/imagens/logoAlura.svg" alt="Logo da Alura"><h1 class="titulo-principal">4° Challenge ONE - Decodificador de texto</h1>
+					
+			</header>
+		</section>
+
 		<main class="main">
 			<section class="parte-esquerda">
-				<header>
-					<nav class="cabecalho-logo">
-						<img src="src/imagens/logoAlura.svg" alt="Logo da Alura">
-						<h2>4° Challenge ONE - Decodificador de texto</h2>
-					</nav>
-					<!--
-					<div>
-						 
-						<p><strong>Esta página se refere ao challenge proposto pelo Programa One.</strong></p> 
-
-						<p>Abaixo, você vai precisar inserir os dados a serem decodificados e clicar no botão "Decodificar" para descriptografar o texto!</p>
-					</div>
-					-->
-				</header>
-			</section>
-
-			<section>
-				<div class="secaoTexto"> <!-- principal-esquerdo-->
-					<div class="texto-esquerdo">
-						<!-- <label for="msgCripto"> Insira o texto a ser criptografado:</label> -->
-						<textarea class="msgCripto" cols="50%" rows="15%" placeholder="Digite ou cole seu texto"> </textarea>
-					</div>
-
-					<div class="frame1">
-						<div class="texto-aviso">
-							<h2>* Inserir apenas letras minúsculas e sem acentos</h2>
-						</div>
-					
-
-						<div class="buttons">
-							<button class="codificar" onclick="buttonCriptografar()">Codificar 
-							</button>
-
-							<button class="decodificar" onclick="buttonDesencriptar()">Decodificar
-							</button> 
-						</div>
-					</div>	
+				
+				<div>
+					<textarea class="box-cod-decod" autofocus placeholder="Digite ou cole o texto"></textarea>
 				</div>
-			
+
+				<div class="box-info">
+					<p>* Apenas letras minúsculas e sem acento!</p>
+				</div>
+				
+				<div>
+					<div class="buttons">
+						<button class="button-cod" onclick="buttonCodificar()">Codificar</button>
+						<button class="button-decod" onclick="buttonDecodificar()">Decodificar</button>
+					</div>
+				</div>
 			</section>
 
 			<section class="parte-direita">
-				<textarea class="msg" cols="20%" rows="7%"> </textarea>
-
-				<button id="copiar" onclick="copiar()">Copiar</button>
-					
-				<div class="texto-saida">
-					<h3>Nenhuma mensagem</h3>
-					<p>Informe o texto que você deseja criptografar ou descriptografar</p>
-
-				</div>
 				
-			</section>
+				<textarea class="box-resultado"></textarea>
 
+				<div class="botao-copiar">
+					<button class="copiar" onclick="copiar()">Copiar</button>
+				</div>
+
+				<div>
+					<div class="saida-texto">
+						<h2 class="h2Info">Nenhuma mensagem</h2>
+						<p class="pInfo">Informe o texto que você deseja codificar ou decodificar</p>
+					</div>
+				</div>
+			</section>
 		</main>
+		
 
 	<!-- end do arquivo .js -->
 	<script src="src/js/script.js"></script>
 
 	
 	<!-- rodapé -->
-	<div class="footer">
-		<span>
-			&copy; Desenvolvido por: danicoln
-		</span>
+	<section class="rodape">
 		<div class="rede-sociais">
-			<a href="https://www.linkedin.com/in/daniellincolndev/"><i class="fa fa-linkedin"></i></a>
+			<footer>
+				&copy; Desenvolvido por: danicoln
+			
+		
+				<a href="https://www.linkedin.com/in/daniellincolndev/"><i class="fa fa-linkedin" id="linkedin"></i></a>
 
-			<a href="https://github.com/danicoln"><i class="fa fa-github"></i></a>
+				<a href="https://github.com/danicoln"><i class="fa fa-github" id="github"></i></a>
 
-			<a href="https://www.instagram.com/lincolndeveloper"><i class="fa fa-instagram"></i></a>
+				<a href="https://www.instagram.com/lincolndeveloper"><i class="fa fa-instagram" id="instagram"></i></a>
+			</footer>
 		</div>
-	</div>
+	</section>
 
 	</body>
 </html>
