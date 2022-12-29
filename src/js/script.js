@@ -1,92 +1,87 @@
 
-		const inputText = document.querySelector('.msgCripto');
-		const msg = document.querySelector('.msg');
-		const textSaida = document.querySelector('.texto-saida');
-		const botaoCopiar = document.querySelector('#copiar');
+	const entradaTexto = document.querySelector('.box-cod-decod');
+	const msg = document.querySelector('.box-resultado');
+	const saidaTexto = document.querySelector('.saida-texto');
+	const botaoCopiar = document.querySelector('.copiar');
 
-		
 
-		//Função para criptografar a mensagem
-		function buttonCriptografar(){
-			const textoEncriptado = encriptar(inputText.value);
-			if(textoEncriptado == ""){
-				alert("Por favor, insira o texto que será encriptado!");
-				return textoEncriptado;
+
+function buttonCodificar(){
+	const textoCodificado = codificar(entradaTexto.value);
+	if(textoCodificado == ""){
+		alert("Por favor, insira o texto que será codificado!");
+		return textoCodificado;
+	}
+
+	msg.value = textoCodificado;
+	msg.style.background="#FFFFFF";
+	msg.style.color="orange";
+	saidaTexto.style.display="none";
+	botaoCopiar.style.display='block';
+}
+
+function codificar(texto){
+	let arrayCodigos = [["a", "ai"], ["e", "enter"], ["i", "imes"], ["o","ober"], ["u", "ufat"], ["aimes", "ai"]];
+
+	texto = texto.toLowerCase();
+
+	for(let i = 0; i < arrayCodigos.length; i++){
+		if(texto.includes(arrayCodigos[i][0])){
+			texto = texto.replaceAll(arrayCodigos[i][0], arrayCodigos[i][1]);
+		}
+	}
+
+	return texto;
+}
+
+function buttonDecodificar(){
+	const textoDecodificado = decodificar(msg.value);
+	if(textoDecodificado ==""){
+		alert("Por favor, insira o texto que será decodificado!");
+		return textoDecodificado;
+	}
+
+	msg.value = textoDecodificado;
+	msg.style.color="red";
+	msg.style.fontSize='20px';
+}
+
+function decodificar(texto){
+	let arrayCodigos = [["a", "ai"], ["e", "enter"], ["i", "imes"], ["o","ober"], ["u", "ufat"], ["aimes", "ai"]];
+
+	texto = texto.toLowerCase();
+
+	for(let i = 0; i < arrayCodigos.length; i++){
+		if(texto.includes(arrayCodigos[i][1])){
+			texto = texto.replaceAll(arrayCodigos[i][1], arrayCodigos[i][0]);
+		}
+	}
+
+	return texto;
+}
+
+async function copiar(){
+	msg.select();
+	try{
+		await navigator.clipboard.writeText(msg.value);
+		console.log('Page URL coied to clipboard');
+	}catch(erro){
+		console.error('Falha ao copiar: ', erro);
+	}
+}
+
+/*função de colar*/
+async function getConteudoPrancheta(){
+	try{
+		const itensDaPrancheta = await navigator.clipboard.read();
+		for(const item of itensDaPrancheta){
+			for(const tipo of item.types){
+				const blob = await item.getType(tipo);
+				console.log(URL.createObjectURL(blob));
 			}
-
-			msg.value = textoEncriptado;
-			msg.style.background="#FFFFFF"
-			msg.style.color="orange"
-			textSaida.style.display="none";
-			botaoCopiar.style.display='block';
-
 		}
+	}catch(erro){
+		console.error(erro.name, erro.message);
+	}
+}
 
-		function encriptar(textoCriptografado){
-			let arrayCodigos = [["a","ai"], ["e","enter"], ["i","imes"], ["o","ober"], ["u", "ufat"], ["aimes", "ai"]];
-			
-			textoCriptografado = textoCriptografado.toLowerCase();
-
-			for(let i = 0; i < arrayCodigos.length; i++){
-				if(textoCriptografado.includes(arrayCodigos[i][0])){
-					textoCriptografado = textoCriptografado.replaceAll(arrayCodigos[i][0], arrayCodigos[i][1]);
-				}
-			}
-			return textoCriptografado;
-
-		}
-
-		//Função para desencriptado a mensagem
-
-		function buttonDesencriptar(){
-			const textoDesencriptado = desencriptar(msg.value);
-			if(textoDesencriptado ==""){
-				alert("Por favor, insira o texto que será desencriptado!");
-				return textoDesencriptado;
-			}
-
-			msg.value = textoDesencriptado;
-			msg.style.color="orange";
-			msg.style.fontSize='20px';
-		}
-
-
-		function desencriptar(textDesencript){
-			let arrayCodigos = [["a","ai"], ["aimes", "ai"], ["e","enter"], ["i","imes"], ["o","ober"], ["u", "ufat"]];
-
-			textDesencript = textDesencript.toLowerCase();
-
-			for(let i = 0; i < arrayCodigos.length; i++){
-				if(textDesencript.includes(arrayCodigos[i][1])){
-					textDesencript = textDesencript.replaceAll(arrayCodigos[i][1], arrayCodigos[i][0]);
-				}
-			}
-
-			return textDesencript;
-		}
-
-		// função copiar
-		async function copiar() {
-			msg.select();
-		  try {
-		    await navigator.clipboard.writeText(msg.value);
-		    console.log('Page URL copied to clipboard');
-		  } catch (err) {
-		    console.error('Failed to copy: ', err);
-		  }
-		}
-
-		// função para colar
-		async function getClipboardContents() {
-		  try {
-		    const clipboardItems = await navigator.clipboard.read();
-		    for (const clipboardItem of clipboardItems) {
-		      for (const type of clipboardItem.types) {
-		        const blob = await clipboardItem.getType(type);
-		        console.log(URL.createObjectURL(blob));
-		      }
-		    }
-		  } catch (err) {
-		    console.error(err.name, err.message);
-		  }
-		}
