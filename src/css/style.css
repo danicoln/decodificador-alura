@@ -69,7 +69,7 @@ body{
 .box-resultado{
 	width: 400px;
 
-	display: flex;
+	
 	margin: 10px 5px 5px 10px;
 	padding: 10px 5px 5px 10px;
 	font-size: 24px;
@@ -79,16 +79,17 @@ body{
 	border: none;
 	resize: none;
 
-	background-image: url("C:/Users/User/OneDrive/Área de Trabalho/Oracle One/Challenge - Decodificador de Texto/src/imagens/pessoa-com-lupa.png");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 300px;
 }
 
 .box-resultado:focus{
 	outline: 0;
 }
 
+#boxResult{
+	width: 400px;
+	margin: 65px 15px 0px 0px;
+	padding: 65px 15px 0px 0px;
+}
 
 .saida-texto{
 	

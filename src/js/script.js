@@ -4,7 +4,7 @@
 	const saidaTexto = document.querySelector('.saida-texto');
 	const botaoCopiar = document.querySelector('.copiar');
 
-
+	document.querySelector('.box-resultado').style.display="none";
 
 function buttonCodificar(){
 	const textoCodificado = codificar(entradaTexto.value);
@@ -12,6 +12,9 @@ function buttonCodificar(){
 		alert("Por favor, insira o texto que será codificado!");
 		return textoCodificado;
 	}
+
+	document.getElementById("boxResult").style.display="none";
+	document.querySelector('.box-resultado').style.display="inline";
 
 	msg.value = textoCodificado;
 	msg.style.background="none";
@@ -44,6 +47,8 @@ function buttonDecodificar(){
 	msg.value = textoDecodificado;
 	msg.style.color="red";
 	msg.style.fontSize='20px';
+	msg.style.background="none";
+	saidaTexto.style.display="none";
 }
 
 function decodificar(texto){
